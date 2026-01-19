@@ -80,7 +80,7 @@ EOS
     hi = original_string
     there = "World"
     hi += there
-    assert_equal "Hello", original_string
+    assert_equal "Hello, ", original_string
   end
 
   def test_the_shovel_operator_will_also_append_content_to_a_string
@@ -88,7 +88,7 @@ EOS
     there = "World"
     hi << there
     assert_equal "Hello, World", hi
-    assert_equal "world", there
+    assert_equal "World", there
   end
 
   def test_the_shovel_operator_modifies_the_original_string
