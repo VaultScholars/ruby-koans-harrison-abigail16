@@ -64,7 +64,7 @@ EOS
     hi = "Hello, "
     there = "World"
     string = hi + there
-    assert_equal "Hello", hi
+    assert_equal "Hello, ", hi
     assert_equal "World", there
   end
 
