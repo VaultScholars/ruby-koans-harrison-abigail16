@@ -30,6 +30,23 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 # Your goal is to write the score method.
 
 def score(dice)
+  total = 0
+  counts = Hash.new(0)
+  dice.each { |die| counts[die] += 1}
+
+  counts.each do |die, count|
+    if count >= 3
+      if die == 1
+        total += 1000
+      else
+        total += die * 100
+      end
+      counts[die] -= 3
+    end
+  end
+  total += counts[1] * 100
+  total += counts[5] * 50
+  total
   # You need to write this method
 end
 
